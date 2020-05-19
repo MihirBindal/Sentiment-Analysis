@@ -4,7 +4,7 @@
 
 I have created two folders- one contains the code and another one conatains output csv files.
 
-The code files includes three python files.I could've very well write all the code in a single file but I made three different files because it becomes easier to understand and work with. Also, this will help in understanding the proper pipeline to do data analysis. The three files in code directory are:-
+The code files includes three python files.I could've very well written all the code in a single file but I made three different files because it becomes easier to understand and work with. Also, this will help in understanding the proper pipeline to do data analysis. The three files in code directory are:-
 
 1) get_tweets.py - This script uses Twitter API to get the tweets. You get an option to enter a keyword or hashtag for which, this script takes 300 most recent tweets and stores them in tweet_output.csv file. 
 
