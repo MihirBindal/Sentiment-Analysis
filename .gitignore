@@ -1,6 +1,7 @@
 twitter_credentials.py
 .idea/
-code/venv/
-code/__pycache__/data_cleaning.cpython-38.pyc
-code/__pycache__/get_tweets.cpython-38.pyc
-code/temp.py
+venv/
+__pycache__/data_cleaning.cpython-38.pyc
+__pycache__/get_tweets.cpython-38.pyc
+temp.py
+*.pyc

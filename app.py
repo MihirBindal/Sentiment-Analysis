@@ -4,7 +4,6 @@ import matplotlib.pyplot as plt
 import pandas as pd
 import data_cleaning
 import get_tweets
-from time import sleep
 
 st.title("Twitter Sentiment Analysis")
 st.write("This application does the sentiment analysis of a twitter hashtag or keyword."
@@ -22,7 +21,7 @@ if phrase is not "":
     data_cleaning.clean_data()
 
     plt.style.use('fivethirtyeight')
-    df = pd.read_csv("..\output file\/cleaned_output.csv")
+    df = pd.read_csv("output file\/cleaned_output.csv")
 
 
     def getSubjectivity(text):
@@ -45,7 +44,7 @@ if phrase is not "":
     df['Subjectivity'] = df["tweet_text"].apply(getSubjectivity)
     df['Polarity'] = df["tweet_text"].apply(getPolarity)
     df['PosNeg'] = df['Polarity'].apply(getAnalysis)
-    df.to_csv(r"..\output file\/final_output.csv")
+    df.to_csv(r"output file\/final_output.csv")
 
 
     def polarity_subjectivity():
@@ -101,6 +100,6 @@ if phrase is not "":
     elif choice == "Top five Negative tweets":
         negative_tweets()
 
-    st.markdown("<sub>Note: This application uses NLP to classify tweets thus if the tweets contain words from languages "
-            "other than English or contain a lot of short-forms, they may not be properly classified</sub>",
-            unsafe_allow_html=True)
+    st.markdown("<sub>Note: This application uses NLP to classify tweets thus if the tweets contain words from "
+                "languages other than English or contain a lot of short-forms, they may not be properly "
+                "classified</sub>", unsafe_allow_html=True)

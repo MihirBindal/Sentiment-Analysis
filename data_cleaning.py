@@ -3,7 +3,7 @@ import re
 
 
 def clean_data():
-    df = pd.read_csv("..\output file\/tweet_output.csv")
+    df = pd.read_csv("output file\/tweet_output.csv")
     i = 0
     for n in df["tweet_text"]:
         df["tweet_text"][i] = re.sub(r'\\..[\w0-9]', '', df["tweet_text"][i])
@@ -17,4 +17,4 @@ def clean_data():
                                      df["username"][i]).group(2)
         df["length_of_tweet"][i] = len(df["tweet_text"][i])
         i += 1
-        df.to_csv(r"..\output file\/cleaned_output.csv")
+        df.to_csv(r"output file\/cleaned_output.csv")
