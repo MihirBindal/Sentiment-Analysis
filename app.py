@@ -21,7 +21,7 @@ if phrase is not "":
     data_cleaning.clean_data()
 
     plt.style.use('fivethirtyeight')
-    df = pd.read_csv("output file\/cleaned_output.csv")
+    df = pd.read_csv("cleaned_output.csv")
 
 
     def getSubjectivity(text):
@@ -44,7 +44,7 @@ if phrase is not "":
     df['Subjectivity'] = df["tweet_text"].apply(getSubjectivity)
     df['Polarity'] = df["tweet_text"].apply(getPolarity)
     df['PosNeg'] = df['Polarity'].apply(getAnalysis)
-    df.to_csv(r"output file\/final_output.csv")
+    df.to_csv(r"final_output.csv")
 
 
     def polarity_subjectivity():

@@ -3,7 +3,7 @@ import re
 
 
 def clean_data():
-    df = pd.read_csv("output file\/tweet_output.csv")
+    df = pd.read_csv("tweet_output.csv")
     i = 0
     for n in df["tweet_text"]:
         df["tweet_text"][i] = re.sub(r'\\..[\w0-9]', '', df["tweet_text"][i])

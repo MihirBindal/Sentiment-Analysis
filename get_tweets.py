@@ -12,7 +12,7 @@ api = tweepy.API(auth, wait_on_rate_limit=True)
 
 
 def insert_to_csv(hashtag_phrase):
-    with open("output file\/tweet_output.csv", "w", encoding="utf-8") as file:
+    with open("tweet_output.csv", "w", encoding="utf-8") as file:
         w = csv.writer(file)
         w.writerow(["timestamp", "tweet_text", "username", "all_hashtags", "followers_count", "favorite_count",
                     "retweets_count", "length_of_tweet"])
