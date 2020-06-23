@@ -17,4 +17,4 @@ def clean_data():
                                      df["username"][i]).group(2)
         df["length_of_tweet"][i] = len(df["tweet_text"][i])
         i += 1
-        df.to_csv(r"output file\/cleaned_output.csv")
+        df.to_csv(r"cleaned_output.csv")
