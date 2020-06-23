@@ -5,6 +5,7 @@ import pandas as pd
 import data_cleaning
 import get_tweets
 
+
 st.title("Twitter Sentiment Analysis")
 st.write("This application does the sentiment analysis of a twitter hashtag or keyword."
          "It does that by taking the recent 300 tweets from that topic/hashtag.")

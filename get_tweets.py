@@ -1,11 +1,8 @@
 from tweepy import Cursor
 import tweepy
 import csv
-ACCESS_TOKEN= '2416039333-DBU1WNwPFMhnG2e4BVXz8KhVcHyUJzfQQVLjTcX'
-ACCESS_TOKEN_SECRET= 'vvSbcXTBs2qODaI9cLDCrlRTrdyLIRsSNEoMdC63kb5mk'
+from twitter_credentials import CONSUMER_KEY, CONSUMER_SECRET, ACCESS_TOKEN, ACCESS_TOKEN_SECRET
 
-CONSUMER_KEY= 'IumY4QH863vr56xQiFj6FWEuz'
-CONSUMER_SECRET= 'ufwIXYsTZN8YFELbL5CYmPCsZZtnFnIBqz6DPO1pLOhZ2RpxiP'
 auth = tweepy.OAuthHandler(CONSUMER_KEY, CONSUMER_SECRET)
 auth.set_access_token(ACCESS_TOKEN, ACCESS_TOKEN_SECRET)
 api = tweepy.API(auth, wait_on_rate_limit=True)
